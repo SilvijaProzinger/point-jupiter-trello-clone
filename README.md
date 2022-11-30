@@ -5,7 +5,7 @@
 - U mapi pokrenite 
 ### `npm install`
 te zatim 
-### `npm install`
+### `npm start`
 - Otvorite  [http://localhost:3000](http://localhost:3000) da biste ju pregledali u svom pregledniku
 
 ## Dependencies
