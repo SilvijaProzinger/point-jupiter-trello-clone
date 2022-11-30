@@ -1,0 +1,28 @@
+$dashboardTextColor: #ffffff;
+$cardBackground: $dashboardTextColor;
+
+.dashboard__container {
+    padding: 0 1rem;
+
+    .dashboard__intro {
+        color: $dashboardTextColor;
+        display: flex;
+        align-items: center;
+        padding: 1rem 0;
+    
+        h1 {
+            margin-right: 2rem
+        }
+    
+        .dashboard__privacy {
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+
+            p {
+                margin-left: 1rem;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

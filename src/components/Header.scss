@@ -1,0 +1,130 @@
+$headerBackground: #24638c;
+$headerLogoColor: #89b0c5;
+$headerButtonBg: #5489a9;
+
+.header__container {
+    background-color: $headerBackground;
+    padding: 1rem;
+
+    button {
+        background-color: #5489a9;
+        border: none;
+        border-radius: 5px;
+        padding: .5rem;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1.6rem;
+
+        &:hover {
+            background-color: lighten($headerButtonBg, 20%);
+        }
+    }
+
+    .header__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .header__logo {
+            display: flex;
+            align-items: center;
+            color: $headerLogoColor;
+            font-size: 3.2rem;
+
+            &::before {
+                content: "";
+                background: url('../icons/icons8-trello.svg') no-repeat center center;
+                margin-right: 5px;
+                margin-top: 5px;
+                opacity: 0.5;
+                width: 30px;
+                height: 30px;
+                background-size: 30px;
+            }
+        }
+
+        .header__inner--left {
+            display: flex;
+            align-items: center;
+
+            .header__boards__button {
+                margin-right: 1rem;
+
+                span {
+                    display: flex;
+                    align-items: center;
+
+                    @media only screen and (max-width: 767px){
+                        font-size: 0;
+                    }
+
+                    &::before {
+                        content: "";
+                        background: url('../icons/icons8-trello.svg') no-repeat center center;
+                        display: block;
+                        width: 20px;
+                        height: 20px;
+                        background-size: 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+            .header__search {
+                background-color: lighten($headerButtonBg, 12%);
+                border: none;
+                height: 30px;
+
+                @media only screen and (max-width: 767px){
+                    display: none;
+                }
+            }
+
+            .header__search__button {
+                height: 30px;
+                border-radius: 0;
+            }
+        }
+
+        .header__inner--right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .header__add__button {
+                margin-right: 1rem;
+            }
+
+            .header__notifications {
+                margin-left: 1rem;
+            }
+
+            .header__user {
+                background-color: $headerButtonBg;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.6rem;
+                padding: .5rem;
+                border-radius: 5px;
+
+                span {
+                    margin-left: 5px;
+                    
+                    @media only screen and (max-width: 767px){
+                        font-size: 0;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &:visited {
+                    color: #fff;
+                }
+
+                &:hover {
+                    background-color: lighten($headerButtonBg, 20%);
+                }
+            }
+        }
+    }
+}

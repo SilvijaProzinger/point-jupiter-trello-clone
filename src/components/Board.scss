@@ -1,0 +1,35 @@
+$boardBackground: #dbdbdb;
+
+.board__container {
+    background-color: $boardBackground;
+    padding: .5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    width: 100%;
+
+    @media only screen and (min-width: 768px){
+        width: 250px;
+        margin-right: 1rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    .board__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        .delete__board {
+            svg path {
+                fill: #808080;
+            }
+
+            &:hover {
+                svg path {
+                    fill: #3f3f3f;
+                }
+            }
+        }
+    }
+}

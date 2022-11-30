@@ -1,0 +1,26 @@
+$headerBackground: #24638c;
+$headerLogoColor: #89b0c5;
+
+.add__board {
+    input {
+        background-color: $headerBackground;
+        border: none;
+        padding: 1rem;
+        width: 100%;
+        border-radius: 5px;
+
+        @media only screen and (min-width: 768px){
+            width: 250px;
+        }
+
+        &:active,
+        &:focus {
+            background-color: $headerLogoColor;
+            outline: $headerLogoColor;
+        }
+    }
+
+    input::placeholder {
+        color: $headerLogoColor;
+    }
+}

@@ -1,0 +1,37 @@
+$backgroundColor: #2971a1;
+
+html {
+    /* 62.5% of 16px browser font size is 10px */
+    font-size: 62.5%;
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
+    body {
+        background-color: $backgroundColor;
+    
+        .visually-hidden {
+            clip: rect(0 0 0 0); 
+            clip-path: inset(50%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap; 
+            width: 1px;
+        }
+
+        button {
+            border: none;
+            background: transparent;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
