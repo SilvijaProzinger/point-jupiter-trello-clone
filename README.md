@@ -13,4 +13,8 @@ te zatim
 - SASS
 - FontAwesome ikone
 
+## Funkcionalnost
+Dodana je funkcionalnost za:
+- dodavanje/brisanje boardova
+- dodavanje/brisanje kartica
 
