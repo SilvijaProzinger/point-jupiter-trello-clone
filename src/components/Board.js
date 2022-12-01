@@ -6,32 +6,13 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import './Board.scss'
 
 const Board = (props) => {
-    const [ cards, setCards ] = useState([
-        {
-            id: 0,
-            content: 'Welcome to Trello!'
-        },
-        {
-            id: 1,
-            content: 'This is an example card.'
-        },
-        {
-            id: 2,
-            content: 'This is another example card.'
-        },
-        {
-            id: 3,
-            content: 'This card has image content.'
-        },
-        {
-            id: 4,
-            content: 'This card has text content.'
-        }
-    ])
-
     const handleDelete = () => {
         props.deleteBoard(props.boardId)
     }
+
+    const cardsToDisplay = props.cards.map((card,index) => 
+        card.parentBoardId === props.boardId ? <Card key={index} content={card.cardContent} cardId={card.id}  deleteCard={props.deleteCard}/> : null
+    )
 
     return (
         <div className="board__container">
@@ -42,8 +23,8 @@ const Board = (props) => {
                     <FontAwesomeIcon icon={faTrash} className="fa-xs" /> 
                 </button>            
             </div>
-            <Card />
-            <AddCard/>
+            {cardsToDisplay}
+            <AddCard onSaveCard={props.onSaveCard} cards={props.cards} boardId={props.boardId}/>
         </div>
     )
 }

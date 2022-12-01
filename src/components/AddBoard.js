@@ -12,7 +12,7 @@ const AddBoard = (props) => {
         event.preventDefault()
     
         const newBoardData = {
-          id: Math.random().toString(),
+          id: props.boardsIds.length-1 + 1,
           boardTitle: enteredTitle
         }
     
